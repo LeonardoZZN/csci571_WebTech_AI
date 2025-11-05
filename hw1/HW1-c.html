@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Generated HTML+JS: Supernova Slideshow</title>
+</head>
+<body>
+    <center>
+        <h1>The Top 10 Most Famous Supernovae in History</h1>
+        <div id="slideshow" width="500" height="500">
+            <img id="slideImage" src="" alt="Slide Image" width="100%" height="100%">
+            <div id="caption"></div>
+        </div>
+    </center>
+
+    <script>
+        // Array of image sources and captions
+        const images = [
+            { src: "https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn185.jpg", caption: "SN 185: This \"guest star\" was observed by Chinese astronomers in the Book of Later Han, and might have been recorded in Roman literature. It remained visible in the night sky for eight months. This is believed to be the first supernova for which records exist."},
+            { src: "https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1006.jpg", caption: "SN 1006: This Type Ia supernova, observed in 1006 AD, was the brightest recorded stellar event in history. Visible worldwide and brighter than Venus, it could even be seen during the day for weeks." },
+            { src: "https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1054.jpg", caption: "SN 1054 (Crab Nebula): Observed in 1054 AD by Chinese astronomers, this supernova is responsible for creating the Crab Nebula, a prominent supernova remnant. It was incredibly bright, remaining visible during the day for nearly a month and outshining everything but the Moon. Its remnant includes a rapidly spinning neutron star, or pulsar, at its center." },
+            { src: "https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1181.jpg", caption: "SN 1181: Observed by Chinese and Japanese astronomers in the constellation Cassiopeia, its remnant is likely the pulsar 3C58." },
+            { src: "https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1572.jpg", caption: "SN 1572 (Tycho's Supernova): Danish astronomer Tycho Brahe meticulously recorded observations of this supernova, also known as Tycho's Nova, in the constellation Cassiopeia. His observations helped challenge the prevailing Aristotelian view of an unchanging celestial sphere." },
+            { src: "https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1604.jpg", caption: "SN 1604 (Kepler's Supernova): This Type Ia supernova, observed by Johannes Kepler and other astronomers, was the last supernova seen within the Milky Way galaxy that was visible to the naked eye." },
+            { src: "https://leonardozzn.github.io/csci571_WebTech/hw1/images/CasA.jpg", caption: "Cas A (c. 1680): Although not visually conspicuous due to interstellar dust, Cassiopeia A is the brightest extrasolar radio source in the sky. It is a Type IIb supernova remnant believed to have exploded around 1680." },
+            { src: "https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1987A.jpg", caption: "SN 1987A: Located in the Large Magellanic Cloud, this Type II supernova was the closest and most easily observed supernova since 1604. It was intensely studied by modern astronomers and provided crucial insights into core-collapse supernovae, including the detection of a burst of neutrinos at the time of the explosion. Recent observations have revealed evidence for a neutron star at its heart." },
+            { src: "https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn2015L.png", caption: "ASASSN-15lh (SN 2015L): Initially classified as the most luminous supernova ever observed, it was 570 billion times brighter than the Sun at its peak. Although its exact nature is still debated, it remains a highly significant event in the study of superluminous supernovae or possibly a tidal disruption event around a supermassive black hole." },
+            { src: "https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn2006gy.jpg", caption: "SN 2006gy: This extremely luminous supernova was observed by NASA and peaked in brightness for over 70 days. It is considered a potential example of a new type of supernova or possibly a pair-instability supernova." }
+        ];
+
+        let currentIndex = 0;
+
+        function showSlide() {
+            const current = images[currentIndex];
+            document.getElementById('slideImage').src = current.src;
+            document.getElementById('caption').textContent = current.caption;
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        // Initialize the first image
+        showSlide();
+
+        // Set interval to switch images every 3.5 seconds
+        setInterval(showSlide, 3500);
+    </script>
+</body>
+</html>

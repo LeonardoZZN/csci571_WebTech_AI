@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AI Generated HTML+CSS+JS: Paragraphs with Different Font Sizes and Borders</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 20px;
+		}
+
+		.paragraph {
+			border: 10px solid;
+			padding: 10px;
+			margin-bottom: 20px;
+		}
+
+		.red {
+			border-color: #FF0000;
+		}
+
+		.orange {
+			border-color: #FF7F00;
+		}
+
+		.yellow {
+			border-color: #FFFF00;
+		}
+
+		.green {
+			border-color: #00FF00;
+		}
+
+		.blue {
+			border-color: #0000FF;
+		}
+
+		.violet {
+			border-color: #4B0082;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		var paragraphs = [];
+		for (var i = 0; i < 5; i++) {
+			var paragraph = document.createElement("P");
+			paragraph.className = "paragraph";
+			if (i === 0) {
+				paragraph.style.fontSize = "10px";
+			} else if (i === 1) {
+				paragraph.style.fontSize = "12px";
+			} else if (i === 2) {
+				paragraph.style.fontSize = "15px";
+			} else if (i === 3) {
+				paragraph.style.fontSize = "20px";
+			} else {
+				paragraph.style.fontSize = "30px";
+			}
+
+			var colorClasses = ["red", "orange", "yellow", "green", "blue", "violet"];
+			paragraph.className += " " + colorClasses[i % 6];
+
+			paragraph.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...";
+			document.body.appendChild(paragraph);
+		}
+	</script>
+</body>
+</html>

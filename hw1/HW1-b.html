@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Generated HTML+CSS: Supernova Slideshow</title>
+  <style>
+    /* Fullscreen Centering */
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+    }
+
+    /* Header */
+    h1 {
+      color: #fff;
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+
+    /* Slideshow Container */
+    .slideshow {
+      width: 80%;
+      height: 60%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: slide 35s infinite;
+    }
+
+    /* Keyframes to animate background image change */
+    @keyframes slide {
+        0%   { background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn185.jpg'); }
+        10%  { background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1006.jpg'); }
+        20%  { background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1054.jpg'); }
+        30%  { background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1181.jpg'); }
+        40%  { background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1572.jpg'); } 
+        50%  { background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1604.jpg'); } 
+        60%  { background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/CasA.jpg'); }
+        70%  { background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1987A.jpg'); }
+        80%  { background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn2015L.png'); }
+        90%  { background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn2006gy.jpg'); }
+        100% { background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn185.jpg'); }
+    }
+  </style>
+</head>
+<body>
+  <h1>The Top 10 Most Famous Supernovae in History</h1>
+  <div class="slideshow"></div>
+</body>
+</html>

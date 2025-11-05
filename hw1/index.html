@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSCI571-HW1</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Keep title above tabs */
+            font-family: sans-serif;
+            background-image: linear-gradient(to bottom, #000, #f48c49); /* Transition from black to solar orange */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;  
+            gap: 40px; /* space between title and tabs */ 
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            color: white; 
+        }
+
+        .tab-container {
+            display: flex; 
+            flex-direction: row; /* Vertical tab containers */
+            justify-content: space-around; /* Space tabs evenly */
+            gap: 20px;  /* Adjust gap if needed */
+        }
+
+        .tab {
+            font-size: 2em;
+            background-color: transparent;
+            border-radius: 15px; 
+            cursor: pointer;
+            padding: 30px 40px;
+            text-decoration: none; 
+            color: white; /* Text color */
+        }
+
+        .tab:hover { 
+            background-color: #ddd;  /* Slightly darker on hover */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSCI571-HW1: HTML, CSS, and JS</h1>
+
+        <div class="tab-container">
+            <a href="https://LeonardoZZN.github.io/csci571_WebTech/hw1/HW1-a.html" target="_blank" class="tab">HW1-a</a>
+            <a href="https://LeonardoZZN.github.io/csci571_WebTech/hw1/HW1-b.html" target="_blank" class="tab">HW1-b</a>
+            <a href="https://LeonardoZZN.github.io/csci571_WebTech/hw1/HW1-c.html" target="_blank" class="tab">HW1-c</a>
+        </div>
+
+    </div>
+</body>
+</html>
